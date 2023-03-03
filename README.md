@@ -1,3 +1,37 @@
+# Tailwind Titan - Nuxt CSS Transformer
+
+Tailwind Titan is a Visual Studio Code extension that detects if a Nuxt.js project is using Tailwind CSS and transforms the CSS code into optimized vanilla CSS. 
+<!-- This extension can help improve the performance of your Nuxt.js project by removing unused CSS code. -->
+
+## Features
+
+- Detects if Tailwind CSS is installed in the project
+- Transforms the CSS code into optimized CSS
+
+## Requirements
+
+- Visual Studio Code version 1.60.0 or higher
+
+## Installation
+
+1. Open Visual Studio Code
+2. Go to the Extensions view (View > Extensions)
+3. Search for "Tailwind Titan - Nuxt CSS Transformer"
+4. Click Install to install the extension
+
+## Usage
+
+1. Open a Nuxt.js project that uses Tailwind CSS
+2. Run the "Check for Tailwind CSS" command in the Command Palette (Ctrl/Cmd + Shift + P)
+3. If Tailwind CSS is detected, the CSS code will be transformed into optimized CSS automatically
+
+## License
+
+This extension is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Issues
+
+If you encounter any issues or have any feature requests, please file an issue on the [GitHub repository](https://github.com/your-username/tailwind-titan-nuxt-css-transformer).
 # tailwind-titan README
 
 This is the README for your extension "tailwind-titan". After writing up a brief description, we recommend including the following sections.
