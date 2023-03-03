@@ -1,7 +1,7 @@
+
 # Tailwind Titan - Nuxt CSS Transformer
 
-Tailwind Titan is a Visual Studio Code extension that detects if a Nuxt.js project is using Tailwind CSS and transforms the CSS code into optimized vanilla CSS. 
-<!-- This extension can help improve the performance of your Nuxt.js project by removing unused CSS code. -->
+Tailwind Titan is a Visual Studio Code extension that detects if a Nuxt.js project is using Tailwind CSS and transforms the custom Tailwind classes into optimized vanilla CSS.
 
 ## Features
 
@@ -10,20 +10,22 @@ Tailwind Titan is a Visual Studio Code extension that detects if a Nuxt.js proje
 
 ## Requirements
 
+- Project has initialized tailwind with `npx tailwindcss init`
 - Visual Studio Code version 1.60.0 or higher
+- TailwindCSS 4.x
 
 ## Installation
 
 1. Open Visual Studio Code
 2. Go to the Extensions view (View > Extensions)
-3. Search for "Tailwind Titan - Nuxt CSS Transformer"
+3. Search for "Tailwind Titan"
 4. Click Install to install the extension
 
 ## Usage
 
 1. Open a Nuxt.js project that uses Tailwind CSS
-2. Run the "Check for Tailwind CSS" command in the Command Palette (Ctrl/Cmd + Shift + P)
-3. If Tailwind CSS is detected, the CSS code will be transformed into optimized CSS automatically
+2. Run the "Check & Transform Tailwind CSS" command in the Command Palette (Ctrl/Cmd + Shift + P)
+3. If Tailwind CSS is detected, the CSS code will be transformed into optimized CSS automatically and saved in a temporary file location to be moved to the path of your choice.
 
 ## License
 
@@ -31,57 +33,41 @@ This extension is licensed under the MIT License. See the [LICENSE](LICENSE) fil
 
 ## Issues
 
-If you encounter any issues or have any feature requests, please file an issue on the [GitHub repository](https://github.com/your-username/tailwind-titan-nuxt-css-transformer).
+If you encounter any issues or have any feature requests, please file an issue on the [GitHub repository](https://github.com/vinosamari/vscode-tailwind-titan).
 # tailwind-titan README
 
-This is the README for your extension "tailwind-titan". After writing up a brief description, we recommend including the following sections.
-
+<!-- 
 ## Features
 
 Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
 
 For example if there is an image subfolder under your extension project workspace:
 
-\!\[feature X\]\(images/feature-x.png\)
+\!\[feature X\]\(images/feature-x.png\) -->
 
 > Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+- None yet
 
 ## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+- Plug and Play
 
 ## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
+- Checks for tailwind.config.js file so if tailwind is not initialized on project,it will say it's not installed.
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
 
-### 1.0.0
+### 0.0.1
 
-Initial release of ...
+Initial release 
 
-### 1.0.1
+### 0.0.2
 
-Fixed issue #.
+Minor code refactoring
 
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
 
 ## Following extension guidelines
 

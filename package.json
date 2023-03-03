@@ -9,13 +9,15 @@
   "categories": [
     "Other"
   ],
+  "publisher": "vinosamari",
   "activationEvents": [],
+  "repository": "https://github.com/vinosamari/vscode-tailwind-titan",
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
       {
         "command": "tailwind-titan.checkForTailwind",
-        "title": "Check For TailwindCSS"
+        "title": "Check & Transform Tailwind CSS"
       }
     ]
   },
