@@ -18,8 +18,6 @@ async function checkForTailwindcss(): Promise<boolean> {
 }
 
 export function activate(context: vscode.ExtensionContext) {
-	console.log("‼ Tailwind CSS Detection extension is now active.");
-
 	// Register the checkForTailwindcss command
 	let disposable = vscode.commands.registerCommand(
 		"tailwind-titan.checkForTailwind",
