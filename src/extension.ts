@@ -1,29 +1,32 @@
 import * as vscode from "vscode";
 import * as fs from "fs";
-
-function checkForTailwindcss(): void {
+async function checkForTailwindcss(): Promise<boolean> {
 	const tailwindConfigPath = vscode.workspace.rootPath + "/tailwind.config.js";
 
-	fs.access(tailwindConfigPath, fs.constants.F_OK, (err) => {
-		if (!err) {
-			vscode.window.showInformationMessage(
-				"Tailwind CSS is installed in this project."
-			);
-		}
-		vscode.window.showErrorMessage(
-			"No Tailwind installed/inititalized in this project!"
+	try {
+		await fs.promises.access(tailwindConfigPath, fs.constants.F_OK);
+		vscode.window.showInformationMessage(
+			"Tailwind CSS is installed in this project."
 		);
-	});
+		return true;
+	} catch (err) {
+		vscode.window.showErrorMessage(
+			"No Tailwind installed/initialized in this project!"
+		);
+		return false;
+	}
 }
 
 export function activate(context: vscode.ExtensionContext) {
-	console.log("Tailwind CSS Detection extension is now active.");
+	console.log("‼ Tailwind CSS Detection extension is now active.");
 
 	// Register the checkForTailwindcss command
 	let disposable = vscode.commands.registerCommand(
 		"tailwind-titan.checkForTailwind",
-		() => {
-			checkForTailwindcss();
+		async () => {
+			if (await checkForTailwindcss()) {
+				vscode.window.showInformationMessage("Parsing components and pages...");
+			}
 		}
 	);
 

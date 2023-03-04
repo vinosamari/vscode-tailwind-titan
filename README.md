@@ -1,18 +1,20 @@
 
 # Tailwind Titan - Nuxt CSS Transformer
 
-Tailwind Titan is a Visual Studio Code extension that detects if a Nuxt.js project is using Tailwind CSS and transforms the custom Tailwind classes into optimized vanilla CSS.
+Tailwind Titan is a Visual Studio Code extension that detects if a Nuxt.js project is using Tailwind CSS and transforms the custom Tailwind classes into optimized vanilla CSS. It was made out of the need to solve the issue of Tailwind styles not being shown on static site generation (with `npm run generate`). [A few issues](https://github.com/nuxt-modules/tailwindcss/issues/55) have been opened but the solutions suggested [haven't worked all the time.](https://github.com/nuxt-modules/tailwindcss/issues/623) This extension will create a `/<rootDir>/assets/css/global.css` file containing vanilla css representations of the tailwind classes in the components and pages as a hack for bypassing the UI framework.
+
+### [NOTE:] THIS PROJECT IS IN ACTIVE DEVELOPMENT. REFER TO THE GIHUB REPOSITORY OR PROJECT WIKI FOR MORE DETAILS.
 
 ## Features
 
-- Detects if Tailwind CSS is installed in the project
-- Transforms the CSS code into optimized CSS
+- Detects if Tailwind CSS is installed in the project.
+- Transforms the custom tailwind code into optimized vanilla CSS.
 
 ## Requirements
 
 - Project has initialized tailwind with `npx tailwindcss init`
-- Visual Studio Code version 1.60.0 or higher
-- TailwindCSS 4.x
+- Visual Studio Code v^1.76.0
+- TailwindCSS v^4.x
 
 ## Installation
 
@@ -36,17 +38,6 @@ This extension is licensed under the MIT License. See the [LICENSE](LICENSE) fil
 If you encounter any issues or have any feature requests, please file an issue on the [GitHub repository](https://github.com/vinosamari/vscode-tailwind-titan).
 # tailwind-titan README
 
-<!-- 
-## Features
-
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\) -->
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
-
 ## Requirements
 
 - None yet
@@ -55,7 +46,8 @@ For example if there is an image subfolder under your extension project workspac
 - Plug and Play
 
 ## Known Issues
-- Checks for tailwind.config.js file so if tailwind is not initialized on project,it will say it's not installed.
+- Considers a project invalid if `tailwind.config.js` not available even if tailwind is in use in components and pages.
+- Ignores styles in class attributes (For now.)
 
 ## Release Notes
 
@@ -67,25 +59,5 @@ Initial release
 ### 0.0.2
 
 Minor code refactoring
-
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
 
 **Enjoy!**
