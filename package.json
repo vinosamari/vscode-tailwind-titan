@@ -6,7 +6,7 @@
   "engines": {
     "vscode": "^1.76.0"
   },
-  "icon": "https://i.postimg.cc/7YKJcYJJ/9cfc9312f1bb4c37a629e646205a242d.png",
+  "icon": "images/icon.png",
   "author": "Vino Samari",
   "bugs": "https://github.com/vinosamari/vscode-tailwind-titan/issues",
   "categories": [
