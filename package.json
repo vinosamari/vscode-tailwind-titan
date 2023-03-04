@@ -1,11 +1,14 @@
 {
   "name": "tailwind-titan",
   "displayName": "Tailwind Titan",
-  "description": "",
+  "description": "Tailwind Titan is a Visual Studio Code extension that detects if a Nuxt.js project is using Tailwind CSS and transforms the custom Tailwind classes into optimized vanilla CSS.",
   "version": "0.0.3",
   "engines": {
     "vscode": "^1.76.0"
   },
+  "icon": "https://i.postimg.cc/7YKJcYJJ/9cfc9312f1bb4c37a629e646205a242d.png",
+  "author": "Vino Samari",
+  "bugs": "https://github.com/vinosamari/vscode-tailwind-titan/issues",
   "categories": [
     "Other"
   ],
